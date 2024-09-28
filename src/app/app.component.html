@@ -1,0 +1,18 @@
+<h1 class="text-center my-3 py-2" appHighlighter>Hover and Click to change Background !</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-5 mx-auto">
+      <input type="text" placeholder="Type to change Color and Border" class="form-control my-3" appRainbower>
+
+
+
+      <div class="text-center" *appCarousel="let img images imgSource Autoplay ''; let ctrl = controller">
+        <img [src]="img" class="img-fluid rounded-3 mb-3 col-12">
+        <button class="btn btn-outline-dark me-2" (click)="ctrl.prev()">< Previous</button>
+        <button class="btn btn-outline-dark" (click)="ctrl.next()">Next ></button>
+      </div>
+
+    </div>
+  </div>
+</div>
